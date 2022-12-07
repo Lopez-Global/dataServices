@@ -15,6 +15,11 @@ The installation process assumes you have PHP, Node, Composer and Docker globall
 - Rename `.env.example` to `.env`
 - Create an application key `php artisan key:generate`
 - Run sails `php artisan sail:install` then setup mariadb, redis, mailhog, selenium `2,3,7,8`
-- In your .env file, change `DB_HOST=mariadb` to `DB_HOST=localhost`. 
 - Build the docker containers and run them `docker-compose up -d` 
+
+## Migrations
+There is a bug when running migrations when using docker. 
+- In your .env file, change `DB_HOST=mariadb` to `DB_HOST=localhost`. 
 - Run the database migrations `php artisan migrate`
+- Change the .env file back to `DB_HOST=mariadb`
+
