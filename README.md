@@ -16,6 +16,7 @@ The installation process assumes you have PHP, Node, Composer and Docker globall
 - Create an application key `php artisan key:generate`
 - Run sails `php artisan sail:install` then setup mariadb, redis, mailhog, selenium `2,3,7,8`
 - Build the docker containers and run them `docker-compose up -d` 
+- Run migrations
 
 ## Migrations
 There is a bug when running migrations when using docker. 
